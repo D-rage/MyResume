@@ -223,7 +223,7 @@ a {
 }
 
 .profile .st0, .profile .st1 {
-  fill: #66cc99;
+  fill: #000053;
 }
 
 .experience {
@@ -231,8 +231,8 @@ a {
   width: 60%;
   float: left;
   position: relative;
-  color: #9099a0;
-  font-weight: 300;
+  color: #66cc99;
+  font-weight: 500;
   min-height: 100%;
   min-height: 100vh;
 }
