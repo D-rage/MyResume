@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Astro — Kundali Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="section-padding">
+    <div class="container">
+      <h1 class="landing-title">Astro — Kundali Generator</h1>
+      <p class="landing-sub">Enter birth details below. This form prepares a payload you can send to a kundali / astrology API.</p>
+
+      <form id="astroForm" class="astro-form" novalidate>
+        <label class="contact-label">Date of Birth
+          <input id="dob" name="dob" type="date" required />
+        </label>
+
+        <label class="contact-label">Time of Birth
+          <input id="tob" name="tob" type="time" required />
+        </label>
+
+        <label class="contact-label">Place (optional)
+          <div style="display:flex;gap:8px;align-items:center;">
+            <input id="place" name="place" type="text" placeholder="e.g. Mumbai, India" style="flex:1;" />
+            <button type="button" id="lookupPlace" class="btn btn-secondary">Lookup</button>
+          </div>
+          <div id="lookupStatus" style="margin-top:6px;color:#9099a0;font-size:0.95rem;"></div>
+        </label>
+
+        <div class="coords" style="display:flex;gap:12px;flex-wrap:wrap;">
+          <label class="contact-label" style="flex:1;">Latitude
+            <input id="lat" name="lat" type="number" step="0.0001" min="-90" max="90" required placeholder="e.g. 19.0760" />
+          </label>
+
+          <label class="contact-label" style="flex:1;">Longitude
+            <input id="lng" name="lng" type="number" step="0.0001" min="-180" max="180" required placeholder="e.g. 72.8777" />
+          </label>
+        </div>
+
+        <div style="margin-top:1rem;display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+          <button type="submit" class="btn btn-primary">Generate Kundali</button>
+          <button type="button" id="clearBtn" class="btn btn-secondary">Clear</button>
+          <a href="index.html" class="btn" style="background:transparent;color:#66cc99;border:none;">← Back</a>
+        </div>
+      </form>
+
+      <section id="astroResult" style="margin-top:1.6rem;">
+        <h3 class="section-title">Prepared payload</h3>
+        <pre id="payloadPreview" style="background:#0b1220;color:#dfeefd;padding:12px;border-radius:8px;overflow:auto;">No submission yet.</pre>
+        <p style="color:#9099a0;margin-top:0.6rem;">Note: Replace the placeholder `API_ENDPOINT` inside <code>astro.js</code> to POST this payload to your kundali/chart API. No external API is called by default.</p>
+      </section>
+    </div>
+  </main>
+
+  <script src="astro.js"></script>
+</body>
+</html>
