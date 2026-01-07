@@ -6,7 +6,11 @@
   const lookupStatus = document.getElementById('lookupStatus');
 
   // Google Geocoding API key (client-side). Keep this restricted in Google Cloud Console.
+<<<<<<< HEAD
   const GEOCODING_API_KEY = 'Test key';
+=======
+  const GEOCODING_API_KEY = 'Test Key';
+>>>>>>> 2342f321e9f277bc9bb4a7758bdcc5d128bc51e0
 
   function showMessage(msg){
     preview.textContent = msg;
