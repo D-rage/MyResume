@@ -1,4 +1,4 @@
-// Some code thanks to @chrisgannon
+
 
 const select = function(s) {
   return document.querySelector(s);
